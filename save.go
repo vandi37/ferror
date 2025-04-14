@@ -36,3 +36,10 @@ func (s Save) Simple(message string) error {
 	}
 }
 
+func (s Save) Two(face, back error) error {
+	return FError {
+		Name: string(s),
+		Err: TwoErrors(face, back),
+	}
+}
+
